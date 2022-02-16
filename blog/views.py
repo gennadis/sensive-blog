@@ -36,7 +36,7 @@ def serialize_post_optimized(post):
 
 
 def serialize_tag(tag):
-    return {"title": tag.title, "posts_with_tag": Post.objects.filter(tags=tag).count()}
+    return {"title": tag.title, "posts_with_tag": tag.posts.count()}
 
 
 def index(request):
